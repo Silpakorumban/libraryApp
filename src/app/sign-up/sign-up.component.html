@@ -1,0 +1,43 @@
+<section>
+    <form class="form1" (ngSubmit)="addUser()">
+        <section>
+            <div>
+                <label for="formGroupExampleInput">First NAme</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="enter first name" [(ngModel)]="sign.firstName " [ngModelOptions]="{standalone: true}">
+            </div>
+            <div>
+                <label for="formGroupExampleInput2">Last Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="enter last name" [(ngModel)]="sign.lastName " [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <div>
+                <label for="formGroupExampleInput2 ">Phone Number</label>
+                <input type="Number" class="form-control " id="formGroupExampleInput2 " placeholder="enter phone no" [(ngModel)]="sign.phoneNumber " [ngModelOptions]="{standalone: true}">
+            </div>
+            <div>
+                <label for="formGroupExampleInput2 "><Address>Address</Address></label>
+                <input type="text " class="form-control " id="formGroupExampleInput2 " placeholder="Enter address " [(ngModel)]="sign.address " [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" placeholder="input your email" name="userName" [(ngModel)]="sign.email" pattern="^[a-z 0-9 .%+]+@[a-z 0-9 .-]+\.[a-z]{2,3}" #email="ngModel" [class.is.invalid]="email.invalid && email.touched">
+                <small class="text-primary"> we will use it as your user name</small>
+                <small class="text-danger" [class.d-none]="(email.valid && email.touched) || ( email.untouched)">Enter valid email</small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="enter your password here" name="passWord" [(ngModel)]="sign.passWord" [(ngModel)]="password2" minlength="6" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password" (onkey)="check()"> Conform your Password</label>
+                <input type="password" class="form-control" placeholder="enter your password here" name="passWord" [(ngModel)]="password1" minlength="6" required>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-danger "> Submit</button>
+        </section>
+
+    </form>
+</section>

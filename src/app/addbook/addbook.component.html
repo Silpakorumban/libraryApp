@@ -1,0 +1,25 @@
+<form class="form1" (ngSubmit)="addBook()">
+    <section>
+        <div>
+            <label for="formGroupExampleInput">Title</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title of the book" [(ngModel)]="bookItem.title " [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            <label for="formGroupExampleInput2">Author</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Author of the book" [(ngModel)]="bookItem.author " [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div>
+            <label for="formGroupExampleInput2 ">About Book</label>
+            <input type="text " class="form-control " id="formGroupExampleInput2 " placeholder="enter details of the book" [(ngModel)]="bookItem.about " [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            <label for="formGroupExampleInput2 ">image URL</label>
+            <input type="text " class="form-control " id="formGroupExampleInput2 " placeholder="Enter Url " [(ngModel)]="bookItem.imageUrl " [ngModelOptions]="{standalone: true}">
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-danger "> Submit</button>
+    </section>
+
+</form>

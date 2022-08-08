@@ -1,0 +1,72 @@
+header {
+    padding: 35px 0;
+    background-color: aliceblue;
+}
+
+.p-ham {
+    cursor: pointer;
+}
+
+.p-ham span {
+    width: 20px;
+    height: 3px;
+    background: black;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.p-ham span:last-child {
+    margin-bottom: 0%;
+}
+
+.p-ham span:nth-child(2) {
+    width: 12px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    padding: 0 40px;
+}
+
+header ul li:first-child {
+    padding-left: 0%;
+}
+
+header ul li:last-child {
+    padding-right: 0%;
+}
+
+header ul li a {
+    color: rgb(108, 6, 38);
+    font-weight: 500;
+    font-size: medium;
+    font-style: '\f032';
+    position: relative;
+}
+
+header ul li a:hover::after {
+    content: "";
+    background: yellowgreen;
+    height: 9px;
+    position: absolute;
+    left: 2px;
+    z-index: -1;
+    bottom: 0;
+    right: -3px;
+}
+
+
+/* header ul li a.is-active::after {
+    content: "";
+    background: pink;
+    height: 9px;
+    position: absolute;
+    left: 2px;
+    z-index: -1;
+    bottom: 0;
+    right: -3px;
+} */

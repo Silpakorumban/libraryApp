@@ -1,0 +1,41 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 p-flex p-flex-align-centre pjs">
+                <ul>
+                    <li class="p-ham">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </li>
+                    <li>
+                        <img class="imgc" src="assets\img\search.png" alt="icon for search" width="30px">
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a routerLink="login" routerLinkActive="active" *ngIf="! auth.logedIn()"> Login</a>
+                    </li>
+                    <li>
+                        <a routerLink="signUp" routerLinkActive="active" *ngIf="! auth.logedIn()"> Sign UP</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="books" *ngIf=" auth.logedIn()">View Books </a>
+                    </li>
+                    <li>
+                        <a routerLink="addbook" *ngIf="auth.logedIn()">Add Book</a>
+                    </li>
+                    <li>
+                        <a routerLink="logout" *ngIf=" auth.logedIn()" (click)="logOutUser()">LogOut</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>

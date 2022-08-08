@@ -1,0 +1,30 @@
+<blockquote class="blockquote text-center">
+    <p class="pclass" class="mb-0">“A reader lives a thousand lives before he dies, The man who never reads lives only one.”</p>
+    <br>
+    <footer class="pclass2" class="blockquote-footer"> George R.R. Martin,<cite title="Source Title">Dance with Dragons</cite></footer>
+</blockquote>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Discreption</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody *ngFor="let i of book">
+        <tr>
+            <td><img src="{{i.imageUrl}}" alt="image" width="80px" height="80px"></td>
+            <td>{{i.title}}</td>
+            <td>{{i.author}}</td>
+            <td>{{i.about}}</td>
+            <td><button type="submit" class="btn btn-danger" *ngIf="auth.logedIn()" (click)="editBook(i)"> Edit</button>
+                <button type="submit" class="btn btn-primary " *ngIf="auth.logedIn()" (click)="deleteBook(i)"> Delete</button></td>
+        </tr>
+
+
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+<section>
+    <div class='card'>
+        <form (ngSubmit)="editBook()">
+            <div class='card-header'>
+                Edit Book
+            </div>
+            <div class='card-body'>
+                <div class='table-responsive'>
+                    <table class='table' ngf>
+
+                        <tbody>
+                            <tr>
+                                <td> <label>Title</label></td>
+                                <td><input type="text" [(ngModel)]="book.title" [ngModelOptions]="{standalone: true}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Author</label></td>
+                                <td><input type="text" [(ngModel)]="book.author" [ngModelOptions]="{standalone: true}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>about book</label></td>
+                                <td><input type="text" [(ngModel)]="book.about " [ngModelOptions]="{standalone: true}" /></td>
+                            </tr>
+
+                            <tr>
+                                <td><label> imageUrl</label></td>
+                                <td><input type="text" [(ngModel)]="book.imageUrl " [ngModelOptions]="{standalone: true}" /></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" value="Submit" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

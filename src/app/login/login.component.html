@@ -1,0 +1,19 @@
+<section>
+    <div class="card-body" class="form1">
+        <form class="form col-md-6" #userLogin="ngForm" (ngSubmit)="userVerify()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" placeholder="input your email" name="userName" [(ngModel)]="user.userName" pattern="^[a-z 0-9 .%+]+@[a-z 0-9 .-]+\.[a-z]{2,3}" #email="ngModel" [class.is.invalid]="email.invalid && email.touched">
+                <small class="text-danger" [class.d-none]="(email.valid && email.touched) || ( email.untouched)">Enter valid email</small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="enter your password here" name="passWord" [(ngModel)]="user.passWord" minlength="6" required>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary " [disabled]="userLogin.form.invalid">Submit</button>
+        </form>
+    </div>
+</section>
